@@ -1,0 +1,32 @@
+<body style="background-color: rgb(166, 166, 226);">
+
+  <div class="texto" *ngIf="estado_juego === 1">
+    <div *ngIf="ganador !== 'Empate'">
+      El ganador es el jugador {{ganador}}!!
+    </div>
+    <div *ngIf="ganador == 'Empate'">
+      Hubo un empate
+    </div>
+  </div>  
+
+  <div class="texto" *ngIf="estado_juego == 0">
+    Es el turno del jugador {{jugadorActual}}
+  </div>
+
+  <div>
+    <table class="tablero">
+      <tr *ngFor="let fila of tablero; index as y">
+        <td *ngFor="let columna of fila; index as x" (click)="hacer_jugada(y, x)" >
+          <div class="casilla" *ngIf="columna.ocupado">
+            {{ columna.jugador }}
+          </div>
+          <div class="casilla" *ngIf="!columna.ocupado && estado_casilla">
+            <ng-container *ngIf="jugadorActual === 'X'">❌</ng-container>
+            <ng-container *ngIf="jugadorActual === 'O'">⭕</ng-container>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <button (click)="reiniciar_juego()">Reiniciar</button>
+  </div>
+</body>

@@ -1,0 +1,40 @@
+.tablero{
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px;
+    border-color: azure;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.texto {
+    border: 10px solid rgb(214, 199, 199);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(190, 244, 244);
+    font-style: italic;
+}
+
+td{
+    width: 90px;
+    height: 90px;
+    background-color: rgb(205, 205, 205);
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+button{
+    width: 90px;
+    margin-top: 20px;
+    background-color: rgb(228, 220, 220);
+    text-align: center;
+    font-size: medium;
+}
+
+body{
+    text-align: center;
+    font-size: xx-large;
+}
+ol{
+    border-collapse: separate;
+    border-spacing: 10px; 
+}
